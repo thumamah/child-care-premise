@@ -1,0 +1,496 @@
+
+@import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
+
+
+ body{
+background-image: url(images/pic7.jpg);
+background-repeat:no-repeat;
+background-size:cover; 
+font-family: "Times New Roman", Times, serif, Verdana;
+}
+
+/* nav bar css */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+
+
+
+
+
+
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+    margin: 0;
+    padding: 0;
+    background-color: #512DA8;
+}
+
+#logo {
+    display: block;
+    padding: 10 20px;
+    float: left;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+/* Since we'll have the "ul li" "float:left"
+* we need to add a clear after the container. */
+
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+* and adding "position:reltive" */
+nav ul {
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px;
+    display: block;
+    float: left;
+    background-color: #512DA8;
+}
+
+/* Styling the links */
+nav a {
+    display: block;
+    color: #FFF;
+    font-size: 17px;
+    text-decoration: none;
+
+}
+
+nav a:hover {
+
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+
+
+}
+
+
+
+/* Hide Dropdowns by Default
+* and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    /* has to be the same number as the "line-height" of "nav a" */
+    top: 50px;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul,
+nav a {
+    display: inherit;
+    padding: 14px 30px;
+    z-index: 100;
+
+}
+
+
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 150px;
+    float: none;
+    display: block;
+    position: relative;
+}
+
+
+
+
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+    nav a {
+        display: block;
+        padding: 14px 30px;
+        color: #FFF;
+        font-size: 17px;
+        text-decoration: none;
+    }
+
+
+
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: left;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle+a,
+    .menu {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle {
+        display: block;
+        color: #FFF;
+        font-size: 45px;
+        text-decoration: none;
+        border: none;
+        width: 15%;
+        cursor: pointer;
+        margin: auto;
+    }
+
+
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked+ul {
+        display: block;
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul .toggle,
+    nav ul ul a {
+        padding: 0 40px;
+    }
+
+    nav ul ul ul a {
+        padding: 0 80px;
+    }
+
+
+
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a {
+        padding: 14px 20px;
+        color: #FFF;
+        font-size: 17px;
+    }
+
+
+    nav ul li ul li .toggle,
+    nav ul ul a {
+        background-color: #525252;
+    }
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+
+    /* Hide menus on hover */
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+        width: 150px;
+        float: none;
+        display: block;
+        position: relative;
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+
+    }
+
+    .btn2 {
+        color: black;
+        display: block;
+        text-decoration: none;
+        float: left;
+        font-family: Verdana;
+        font-size: larger;
+        list-style-type: none;
+        margin-left: 10rem;
+
+    }
+
+}
+
+@media all and (max-width : 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+
+
+}
+
+.btn2 {
+    color: black;
+    display: block;
+    text-decoration: none;
+    float: left;
+    font-family: Verdana;
+    font-size: larger;
+    list-style-type: none;
+    margin-left: 15rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+/*  */
+
+#container1{
+  margin-top: 0rem;
+}
+
+/* day details  */
+
+#container-day {
+  background-color: none;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+  color: black;
+  font-weight: bold;
+}
+
+/* registration form styling */
+#container2{
+  background-color:whitesmoke;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+  color: black;
+  font-weight: bold;
+}
+
+
+#basic-information{
+background-color:antiquewhite;
+font-family:arial;
+font-size:1.3rem;
+line-height:1.8rem;
+padding:2rem;
+text-align:justify;
+margin-bottom: 1rem;
+text-decoration: wavy;
+}
+
+#basic-information1{
+
+font-family:arial;
+font-size:1.1rem;
+line-height:1.4rem;
+padding:1rem;
+text-align:justify;
+margin-bottom: 1rem;
+text-decoration: wavy;
+}
+
+
+
+#basic-information-title{
+background-color:burlywood;
+padding: 1rem;
+font-weight: bold;
+text-decoration: wavy;
+}
+
+#basic-information-title1{
+background-color:aqua;
+padding: 1rem;
+font-weight: bold;
+font-family: Verdana;
+text-decoration: wavy;
+}
+
+
+#last-info{
+margin-bottom: 16rem;
+}
+
+#buttons{
+background-color: orangered;
+color: white;
+text-decoration: solid;
+font-weight: bold;
+}
+
+
+#firstCard{
+padding: 3rem;
+background-image: url(images/pic9.jpg);
+color: red;
+text-decoration-color: #512DA8;
+font-weight: bold;
+font-family: 'Cherry Swash';
+font-size: 20rem;
+}
+
+#card-title1{
+font-size:3rem;
+color: blue;
+font-weight: bold;
+}
+
+
+footer{
+background-color: #512DA8;
+margin:0px auto;
+padding: 20px 0px 20px 0px;
+font-weight: bold;
+color: white;
+text-decoration: none;
+}
+
+.card{
+  padding: 2rem;
+  
+} 
+
+.global-container{
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.welcome{
+  padding: 3rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-family: 'Cherry Swash';
+  font-size: 15rem;
+} 
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=tel], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.succes-msg{
+  background-color:aqua;
+  padding: 2rem;
+  margin-top: 10rem;
+  margin-left: 3rem;
+  font-weight: bold;
+  
+}
+
+/* testimonials styling */
+
+.testi{
+  background-color:beige;
+  width: 60%;
+  margin: auto;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+@media only screen and (max-width: 700px) {
+   .testi{
+       width: 90%;
+       margin: auto;
+   }
+}
+
+/* logout css */
+
+.card{
+    padding: 2rem;
+    
+} 
+
+  .global-container{
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}
+
+.welcome{
+    padding: 3rem;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-family: 'Cherry Swash';
+    font-size: 15rem;
+} 
+
+
+
+/* ***************************************************       left bar css                 ******************************************* */
+
